@@ -9,9 +9,18 @@
       margin: 0 auto;
       justify-content: space-between;
       align-items: center;
-
+      
       > img{
         max-height: 45px;
+      }
+      
+      > div{
+        display: flex;
+        gap:15px;
+
+        button{
+          height: 40px;
+        }
       }
 
     }

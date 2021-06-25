@@ -17,7 +17,9 @@ export function Question({ content, author }: QuestionProps) {
           <img src={author.avatar} alt={author.name} />
           <span>{author.name}</span>
         </div>
-        <div></div>
+        <div>
+          <button> yes</button>
+        </div>
       </footer>
     </div>
   )
