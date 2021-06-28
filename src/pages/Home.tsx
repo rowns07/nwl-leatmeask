@@ -8,8 +8,6 @@ import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 import '../styles/auth.scss';
 
-
-
 export function Home() {
   const history = useHistory();
   const { signInWithGoogle, user } = useAuth()
@@ -34,6 +32,11 @@ export function Home() {
 
     if (!roomRef.exists()) {
       alert('Room does not exists.');
+      return;
+    }
+
+    if (roomRef.val().closedAt) {
+      alert('Room already closed.');
       return;
     }
 
